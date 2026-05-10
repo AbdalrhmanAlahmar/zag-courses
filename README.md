@@ -51,6 +51,8 @@ zag-courses/
 ├── css/
 │   ├── style.css
 │   └── bootstrap.css
+|   └── responive.css
+|   └── all.min.css
 ├── script.js/
 │   ├── scr.js
 │   └── bootstrap.bundle.js
