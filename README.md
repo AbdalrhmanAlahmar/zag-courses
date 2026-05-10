@@ -6,7 +6,7 @@ An educational web platform that helps students discover and explore top online 
 
 ## 🌐 Live Preview
 
-> Add your GitHub Pages or hosting link here
+> https://azmuth6.github.io/zag-courses/
 
 ---
 
