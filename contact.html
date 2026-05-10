@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">zag-courses</div>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-parts" id="nav-parts">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a id="current" href="contact.html">Contact</a></li>
+            <li><a href="sign.html">sign in</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>Get In <span>Touch</span></h1>
+        <p>We'd love to hear from you</p>
+    </div>
+
+    <div class="contact-wrapper">
+
+        <div class="contact-info">
+            <h2>Contact Info</h2>
+
+            <div class="info-box">
+                <i class="fa-solid fa-envelope"></i>
+                <div class="info-text">
+                    <h4>Email</h4>
+                    <p>zag-courses@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="info-text">
+                    <h4>Location</h4>
+                    <p>Cairo, Egypt</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div class="info-text">
+                    <h4>WhatsApp</h4>
+                    <p>+20 109 477 2599</p>
+                </div>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h1>Contact Us</h1>
+
+            <form action="https://formsubmit.co/zagcourses@gmail.com" id="contact-form" method="POST">
+
+                <!-- formsubmit.co: hidden fields مطلوبة -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New message from Zag-Courses!">
+                
+
+                <div class="content-form my-3">
+                    <label class="fw-bold" for="UserName">User Name</label>
+                    <input id="UserName" class="form-control" type="text" name="name" required>
+                    <span class="text-danger fw-medium ms-4"></span>
+                </div>
+                <div class="content-form my-3">
+                    <label class="fw-bold" for="MobileNumber">Mobile Number</label>
+                    <input id="MobileNumber" class="form-control" type="tel" name="phone">
+                    <span class="text-danger fw-medium ms-4"></span>
+                </div>
+                <div class="content-form my-3">
+                    <label class="fw-bold" for="Email">Email</label>
+                    <!-- ✅ name="email" بحروف صغيرة — ده اللي formsubmit بيحتاجه -->
+                    <input id="Email" class="form-control" type="email" name="email" required>
+                    <span class="text-danger fw-medium ms-4"></span>
+                </div>
+                <div class="content-form my-3">
+                    <label class="fw-bold" for="Message">Message</label>
+                    <textarea id="Message" placeholder="Write your message here..." rows="5" name="Message"
+                        class="form-control"></textarea>
+                    <span class="text-danger fw-medium ms-4"></span>
+                </div>
+                <div>
+                    <button class="col-12 btn btn-danger mt-3 fw-bold" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <p class="logo">Zag-courses</p>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sign.html">Sign in</a></li>
+        </ul>
+        <p class="copy">&copy; 2026 Zag-courses. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js/scr.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navParts = document.getElementById('nav-parts');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navParts.classList.toggle('open');
+        });
+        navParts.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navParts.classList.remove('open');
+            });
+        });
+    </script>
+
+</body>
+</html>

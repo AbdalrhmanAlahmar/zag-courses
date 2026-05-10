@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        /* ✅ تم تصحيح flex-wrap وإضافة wrap */
+        .courses {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;   /* كان nowrap — ده كان السبب */
+            gap: 20px;
+            padding: 2rem 1rem;
+        }
+
+        .card {
+            width: 250px;
+            height: auto;       /* كان 400px ثابت */
+            flex-shrink: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">zag-courses</div>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-parts" id="nav-parts">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a id="current" href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sign.html">sign in</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>About <span style="color:#7c5cfc;">Zag-Courses</span></h1>
+        <p>
+            Zag-Courses is an educational platform created to help students
+            learn Cyber Security, Networking, Web Development,
+            Programming and many other technical skills.
+        </p>
+        <a href="product.html">Explore Courses</a>
+    </section>
+
+    <section class="team-section">
+        <img src="img/team.jpeg" alt="Zag-Courses Team" class="team-img">
+    </section>
+
+    <section style="text-align: center; padding: 50px 20px 20px;">
+        <h2 style="font-size: 2rem; color: #7c5cfc; margin-bottom: 10px;">We Are The Developers</h2>
+        <p style="font-size: 1.1rem; color: #ccc; letter-spacing: 1px;">
+            Ibrahiem Bassyouni &nbsp;|&nbsp; Salah Ahmed &nbsp;|&nbsp; AlHossien Naser &nbsp;|&nbsp; Eslam Elmazarqy
+            &nbsp;|&nbsp; Abdulrahman Alahmar
+        </p>
+        <div style="width: 80px; height: 4px; background: #7c5cfc; margin: 20px auto 0;"></div>
+    </section>
+
+    <!-- Developer Cards -->
+    <section style="padding: 40px 1rem; max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 30px;">
+
+        <!-- Ibrahiem -->
+        <div style="background: #1a1a2e; border-radius: 16px; padding: 30px; border-left: 5px solid #7c5cfc; box-shadow: 0 4px 20px rgba(124,92,252,0.15);">
+            <h3 style="color: #7c5cfc; font-size: 1.5rem; margin-bottom: 5px;">Ibrahiem Bassyouni</h3>
+            <span style="color: #aaa; font-size: 0.9rem;">About Page Designer</span>
+            <p style="color: #ccc; margin-top: 15px; line-height: 1.8;">
+                Ibrahiem designed the About page, crafting a clean and informative layout that introduces the
+                platform, showcases the team, and gives visitors a clear picture of what Zag-Courses is all about.
+            </p>
+            <a href="https://www.linkedin.com/in/ibrahiem-bassyouni-a46ab7363" target="_blank" rel="noopener noreferrer"
+                style="display:inline-flex;align-items:center;gap:8px;margin-top:15px;padding:10px 20px;background:#0077b5;color:#fff;border-radius:8px;text-decoration:none;font-size:0.9rem;font-weight:bold;">
+                <i class="fab fa-linkedin"></i> LinkedIn Profile
+            </a>
+        </div>
+
+        <!-- Salah -->
+        <div style="background: #1a1a2e; border-radius: 16px; padding: 30px; border-left: 5px solid #7c5cfc; box-shadow: 0 4px 20px rgba(124,92,252,0.15);">
+            <h3 style="color: #7c5cfc; font-size: 1.5rem; margin-bottom: 5px;">Salah Ahmed</h3>
+            <span style="color: #aaa; font-size: 0.9rem;">Product Page Designer</span>
+            <p style="color: #ccc; margin-top: 15px; line-height: 1.8;">
+                Salah worked on the Products page, building a well-structured layout that displays all available
+                courses clearly, helping users browse and find the right course for them.
+            </p>
+            <a href="https://www.linkedin.com/in/salah-ahmed-azmuth" target="_blank" rel="noopener noreferrer"
+                style="display:inline-flex;align-items:center;gap:8px;margin-top:15px;padding:10px 20px;background:#0077b5;color:#fff;border-radius:8px;text-decoration:none;font-size:0.9rem;font-weight:bold;">
+                <i class="fab fa-linkedin"></i> LinkedIn Profile
+            </a>
+        </div>
+
+        <!-- AlHossien -->
+        <div style="background: #1a1a2e; border-radius: 16px; padding: 30px; border-left: 5px solid #7c5cfc; box-shadow: 0 4px 20px rgba(124,92,252,0.15);">
+            <h3 style="color: #7c5cfc; font-size: 1.5rem; margin-bottom: 5px;">AlHossien Nasser</h3>
+            <span style="color: #aaa; font-size: 0.9rem;">Product Page Designer</span>
+            <p style="color: #ccc; margin-top: 15px; line-height: 1.8;">
+                AlHossien co-designed the Products page alongside Salah, contributing to the visual structure
+                and making sure the course listings are easy to navigate and visually appealing.
+            </p>
+            <a href="https://www.linkedin.com/in/al-hosain-nasser-95890635a" target="_blank" rel="noopener noreferrer"
+                style="display:inline-flex;align-items:center;gap:8px;margin-top:15px;padding:10px 20px;background:#0077b5;color:#fff;border-radius:8px;text-decoration:none;font-size:0.9rem;font-weight:bold;">
+                <i class="fab fa-linkedin"></i> LinkedIn Profile
+            </a>
+        </div>
+
+        <!-- Eslam -->
+        <div style="background: #1a1a2e; border-radius: 16px; padding: 30px; border-left: 5px solid #7c5cfc; box-shadow: 0 4px 20px rgba(124,92,252,0.15);">
+            <h3 style="color: #7c5cfc; font-size: 1.5rem; margin-bottom: 5px;">Eslam Elmzarqy</h3>
+            <span style="color: #aaa; font-size: 0.9rem;">Home Page Designer</span>
+            <p style="color: #ccc; margin-top: 15px; line-height: 1.8;">
+                Eslam designed the Home page, creating the first impression of Zag-Courses with a modern and
+                welcoming layout that guides visitors into exploring the platform effortlessly.
+            </p>
+            <a href="https://www.linkedin.com/in/eslam-elmzarqy" target="_blank" rel="noopener noreferrer"
+                style="display:inline-flex;align-items:center;gap:8px;margin-top:15px;padding:10px 20px;background:#0077b5;color:#fff;border-radius:8px;text-decoration:none;font-size:0.9rem;font-weight:bold;">
+                <i class="fab fa-linkedin"></i> LinkedIn Profile
+            </a>
+        </div>
+
+        <!-- Abdulrahman -->
+        <div style="background: #1a1a2e; border-radius: 16px; padding: 30px; border-left: 5px solid #7c5cfc; box-shadow: 0 4px 20px rgba(124,92,252,0.15);">
+            <h3 style="color: #7c5cfc; font-size: 1.5rem; margin-bottom: 5px;">Abdulrahman Alahmar</h3>
+            <span style="color: #aaa; font-size: 0.9rem;">Contact Page Designer</span>
+            <p style="color: #ccc; margin-top: 15px; line-height: 1.8;">
+                Abdulrahman built the Contact page, designing a simple and functional interface that makes it
+                easy for users to reach out, ask questions, and connect with the Zag-Courses team.
+            </p>
+            <a href="https://www.linkedin.com/in/abdulrahman-alahmar-821338355" target="_blank" rel="noopener noreferrer"
+                style="display:inline-flex;align-items:center;gap:8px;margin-top:15px;padding:10px 20px;background:#0077b5;color:#fff;border-radius:8px;text-decoration:none;font-size:0.9rem;font-weight:bold;">
+                <i class="fab fa-linkedin"></i> LinkedIn Profile
+            </a>
+        </div>
+
+    </section>
+
+    <!-- About Cards -->
+    <section class="courses">
+        <div class="card">
+            <img src="img/OIP%20(4).jpg" alt="Home Page">
+            <div class="card-info">
+                <h3>Home Page</h3>
+                <p>The Home page introduces Zag-Courses platform with a modern design,
+                    showing featured courses and helping users explore the website easily.</p>
+                <a href="index.html">Visit Home</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/OIP%20(1).jpg" alt="Products Page">
+            <div class="card-info">
+                <h3>Products Page</h3>
+                <p>The Products page displays all available courses in Cyber Security,
+                    Networking, Web Development and more.</p>
+                <a href="product.html">View Products</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/OIP%20(3).jpg" alt="Contact Page">
+            <div class="card-info">
+                <h3>Contact Page</h3>
+                <p>The Contact page allows users to send messages, ask questions,
+                    and communicate directly with the team.</p>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developers -->
+    <section class="developers">
+        <div class="dev-container">
+            <div class="dev-card">
+                <h3>Ibrahiem Bassyouni</h3>
+                <p>About page Designer</p>
+            </div>
+            <div class="dev-card">
+                <h3>Salah Ahmed & AlHossien Naser</h3>
+                <p>Product page Designers</p>
+            </div>
+            <div class="dev-card">
+                <h3>Eslam Elmazarqy</h3>
+                <p>Home page Designer</p>
+            </div>
+            <div class="dev-card">
+                <h3>Abdulrahman Alahmar</h3>
+                <p>Contact page Designer</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p class="logo">zag-courses</p>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sign.html">sign in</a></li>
+        </ul>
+        <p class="copy">&copy; 2026 Zag-courses. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navParts = document.getElementById('nav-parts');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navParts.classList.toggle('open');
+        });
+        navParts.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navParts.classList.remove('open');
+            });
+        });
+    </script>
+
+</body>
+</html>

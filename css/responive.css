@@ -1,0 +1,189 @@
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px;
+    background: none;
+    border: none;
+    z-index: 1001;
+    flex-shrink: 0;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+
+
+@media (max-width: 992px) {
+
+    .courses {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .dev-container {
+        gap: 4rem !important;
+        padding: 4rem !important;
+    }
+
+    .contact-wrapper {
+        margin: 0 20px 60px !important;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    
+    nav.navbar {
+        flex-wrap: wrap !important;
+        padding: 0.9rem 1.2rem !important;
+        gap: 0 !important;
+        position: relative !important;
+        align-items: center !important;
+    }
+
+    nav.navbar .logo {
+        flex: 1 !important;
+        font-size: 1.3rem !important;
+    }
+
+    /* إظهار الـ hamburger */
+    nav.navbar .hamburger {
+        display: flex !important;
+    }
+
+    nav.navbar ul.nav-parts {
+        display: none !important;
+        flex-direction: column !important;
+        width: calc(100% + 2.4rem) !important;
+        margin-left: -1.2rem !important;
+        gap: 0 !important;
+        background: #5a2dbf !important;
+        padding: 0 !important;
+        list-style: none !important;
+        order: 10 !important;
+    }
+
+    nav.navbar ul.nav-parts.open {
+        display: flex !important;
+    }
+
+    nav.navbar ul.nav-parts li {
+        border-bottom: 1px solid rgba(255,255,255,0.12) !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    nav.navbar ul.nav-parts li:last-child {
+        border-bottom: none !important;
+    }
+
+    nav.navbar ul.nav-parts a {
+        display: block !important;
+        padding: 0.9rem 1.5rem !important;
+        font-size: 1rem !important;
+        width: 100% !important;
+        color: #fff !important;
+        transform: none !important;
+        transition: background 0.2s !important;
+    }
+
+    nav.navbar ul.nav-parts a:hover {
+        background: rgba(255,255,255,0.1) !important;
+        transform: none !important;
+        color: #fff !important;
+    }
+
+    /* ── Hero ── */
+    .hero {
+        padding: 3rem 1.5rem !important;
+    }
+    .hero h1 { font-size: 2rem !important; }
+
+    /* ── Courses ── */
+    .courses {
+        grid-template-columns: repeat(2, 1fr) !important;
+        padding: 2rem 1rem !important;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+    }
+
+    .courses .card {
+        width: 100% !important;
+        max-width: 340px !important;
+        flex-shrink: 1 !important;
+        height: auto !important;
+    }
+
+    .courses .card img {
+        width: 100% !important;
+        height: 180px !important;
+        object-fit: cover !important;
+    }
+
+    /* ── Team ── */
+    .team-img { width: 95% !important; }
+
+    /* ── Dev cards ── */
+    .dev-container {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        padding: 2rem 1rem !important;
+        align-items: center !important;
+    }
+    .dev-card { max-width: 100% !important; flex: unset !important; }
+
+    /* ── Contact ── */
+    .contact-wrapper {
+        flex-direction: column !important;
+        margin: 0 1rem 40px !important;
+    }
+    .contact-info, .contact-form { padding: 30px 20px !important; }
+    .page-header { padding: 30px 1rem 20px !important; }
+    .page-header h1 { font-size: 1.7rem !important; }
+
+    /* ── Sign ── */
+    .container { width: 95vw !important; min-height: auto !important; }
+
+    /* ── Footer ── */
+    .footer-links {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .hero h1 { font-size: 1.6rem !important; }
+
+    .courses { grid-template-columns: 1fr !important; }
+
+    nav.navbar .logo { font-size: 1.2rem !important; }
+
+    .toggle-container { display: none !important; }
+    .form-container { position: static !important; width: 100% !important; opacity: 1 !important; }
+    .sign-up { display: none; }
+    .container {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: auto !important;
+        border-radius: 16px !important;
+    }
+}
