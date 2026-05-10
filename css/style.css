@@ -637,3 +637,55 @@ body {
         transform: none !important;
     }
 }
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-parts { display: none; flex-direction: column; width: 100%; }
+    .nav-parts.open { display: flex; }
+    .hamburger { display: block; }
+}
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-header p {
+        font-size: 0.85rem;
+    }
+
+    .contact-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .info-text p {
+        font-size: 0.85rem;
+    }
+
+    .card-info h3 {
+        font-size: 0.9rem;
+    }
+}
