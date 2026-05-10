@@ -80,8 +80,4 @@ zag-courses/
    ```
 2. Open `index.html` in your browser — no setup needed.
 
----
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
